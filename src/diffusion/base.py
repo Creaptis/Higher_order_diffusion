@@ -50,11 +50,3 @@ DiffusionTransitionInputs = Union[flax.struct.dataclass, jnp.ndarray]
 DiffusionTransitionFn = Callable[
     [DiffusionState, DiffusionTransitionInputs], DiffusionState
 ]
-
-
-if __name__ == "__main__":
-    dif_state = DiffusionState(x_t=1, mean_t=2, t=3)
-    dif_state = dif_state.replace(x_t=4)
-    print(dif_state)
-    # print(dif_state.get("x_t"))
-    print(dif_state["x_t"])

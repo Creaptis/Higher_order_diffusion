@@ -1,5 +1,3 @@
-from dataclasses import dataclass
-from typing import Callable
 import flax
 import jax.numpy as jnp
 

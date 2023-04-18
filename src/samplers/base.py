@@ -1,5 +1,5 @@
 from typing import List
-from jaxtyping import Array
+from data_types import Array
 import diffusion.base as diffusion_lib
 import jax
 import jax.numpy as jnp

@@ -1,4 +1,4 @@
-from typing import Any, Callable, Dict, List, Optional, Tuple
+from typing import Any, Tuple
 import flax
 import optax
 import jax

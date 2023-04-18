@@ -1,18 +1,14 @@
 import jax
-from typing import Tuple, Sequence, Callable
-from jaxtyping import Array, Float
+from typing import Tuple
+from data_types import Array
 import jax.numpy as jnp
 
 
-def batch_mul(
-    x: Float[Array, "B ..."], y: Float[Array, "B ..."], in_axes: Tuple[int] = (0, 0)
-) -> Float[Array, "B ..."]:
+def batch_mul(x: Array, y: Array, in_axes: Tuple[int] = (0, 0)) -> Array:
     return jax.vmap(lambda x, y: x * y, in_axes=in_axes)(x, y)
 
 
-def batch_add(
-    x: Float[Array, "B ..."], y: Float[Array, "B ..."], in_axes: Tuple[int] = (0, 0)
-) -> Float[Array, "B ..."]:
+def batch_add(x: Array, y: Array, in_axes: Tuple[int] = (0, 0)) -> Array:
     return jax.vmap(lambda x, y: x + y, in_axes=in_axes)(x, y)
 
 

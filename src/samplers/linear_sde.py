@@ -3,8 +3,7 @@ import jax
 import flax
 
 from typing import Callable
-from jaxtyping import Array, Float
-from data_types import RNG
+from data_types import RNG, Array
 
 import diffusion.base as diffusion_lib
 import diffusion.beta_schedule as schedule_lib

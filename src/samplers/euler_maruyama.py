@@ -1,12 +1,9 @@
 import jax
 import jax.numpy as jnp
 
-from typing import Union
-from jaxtyping import Array, Float, Int
-
 import functools
 import utils.math as ops
-from data_types import RNG, DiffusionFn, DriftFn
+from data_types import RNG, DiffusionFn, DriftFn, Array
 import diffusion.base as diffusion_lib
 import samplers.base as sampler_lib
 
@@ -100,7 +97,7 @@ def euler_maruyama_to_time_t(
 
 def euler_maruyama(
     diffusion_state: diffusion_lib.DiffusionState,
-    step_schedule: Float[Array, "B n_steps"],
+    step_schedule: Array,
     drift_fn: DriftFn,
     diffusion_scale_fn: DiffusionFn,
     return_trajectory: bool = False,
