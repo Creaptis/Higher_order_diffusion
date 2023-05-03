@@ -116,9 +116,14 @@ class MLPDiffusionModel(nn.Module):
         emb = jnp.concatenate([x_emb, t_emb], axis=-1)
 
         vec = FCBlock(hidden_layer=self.joint_hidden_dim, out_dim=out_dim)(emb)
-        vec = vec + x
+        vec = vec 
 
         return vec
+
+
+
+
+
 
 
 if __name__ == "__main__":
